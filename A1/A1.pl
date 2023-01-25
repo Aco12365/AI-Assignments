@@ -12,16 +12,17 @@ member(X,[X|_]).
 member(X,[_|L]):-
 	member(X,L).
 
+opposite(1, 0).		% The opposite of east is west
+opposite(0, 1) :-
+	!.
 
+unsafe(state(right(Lr1,Lr2,Lr3,Wr1,Wr2,Wr3),left(Ll1,Ll2,Ll3,Wl1,Wl2,Wl3))):- % Unsafe state
+    ((Wr1+Wr2+Wr3)>0;(Lr1+Lr2+Lr3)>(Wr1+Wr2+Wr3)),((Wl1+Wl2+Wl3)>0;(Ll1+Ll2+Ll3)>(Wl1+Wl2+Wl3)).
 
-unsafe(state(Lr,Wr,Ll,Wl)):- % Unsafe state
-    (Wr>0;Lr>=Wr),(Wl>0;Ll>Wl).
-
-move(state(Lr,Wr,Ll,Wl),state(Lr-1,Wr-,L2,W2)):-
-
-
-
-
-
+move(state(right(Lr1a,Lr2a,Lr3,Wr1,Wr2,Wr3),left(Ll1a,Ll2a,Ll3,Wl1,Wl2,Wl3)),state(right(Lr1b,Lr2b,Lr3,Wr1,Wr2,Wr3),left(Ll1b,Ll2b,Ll3,Wl1,Wl2,Wl3))):-
+    opposite(Lr1a,Lr1b),
+    opposite(Lr2a,Lr2b),
+    opposite(Ll1a,Ll1b),
+    opposite(Ll2a,Ll2b).
 
 
