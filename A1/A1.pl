@@ -90,3 +90,24 @@ move(state(right(Lr1,Lr2a,Lr3a,Wr1,Wr2,Wr3),left(Ll1,Ll2a,Ll3a,Wl1,Wl2,Wl3)),sta
     opposite(Lr2a,Lr2b),
     opposite(Ll3a,Ll3b),
     opposite(Ll2a,Ll2b).
+
+# Lion 2 and Wildebeest 1
+move(state(right(Lr1,Lr2a,Lr3,Wr1a,Wr2,Wr3),left(Ll1,Ll2a,Ll3,Wl1a,Wl2,Wl3)),state(right(Lr1,Lr2b,Lr3,Wr1b,Wr2,Wr3),left(Ll1,Ll2b,Ll3,Wl1b,Wl2,Wl3))):-
+    opposite(Lr2a,Lr2b),
+    opposite(Wr1a,Wr1b),
+    opposite(Ll2a,Ll2b),
+    opposite(Wl1a,Wl1b).
+
+# Lion 2 and Wildebeest 2
+move(state(right(Lr1,Lr2a,Lr3,Wr1,Wr2a,Wr3),left(Ll1,Ll2a,Ll3,Wl1,Wl2a,Wl3)),state(right(Lr1,Lr2b,Lr3,Wr1,Wr2b,Wr3),left(Ll1,Ll2b,Ll3,Wl1,Wl2b,Wl3))):-
+    opposite(Lr2a,Lr2b),
+    opposite(Wr2a,Wr2b),
+    opposite(Ll2a,Ll2b),
+    opposite(Wl2a,Wl2b).
+
+# Lion 2 and Wildebeest 3
+move(state(right(Lr1,Lr2a,Lr3,Wr1,Wr2,Wr3a),left(Ll1,Ll2a,Ll3,Wl1,Wl2,Wl3a)),state(right(Lr1,Lr2b,Lr3,Wr1,Wr2,Wr3b),left(Ll1,Ll2b,Ll3,Wl1,Wl2,Wl3b))):-
+    opposite(Lr2a,Lr2b),
+    opposite(Wr3a,Wr3b),
+    opposite(Ll2a,Ll2b),
+    opposite(Wl3a,Wl3b).
