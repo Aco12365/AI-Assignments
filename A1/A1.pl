@@ -25,4 +25,9 @@ move(state(right(Lr1a,Lr2a,Lr3,Wr1,Wr2,Wr3),left(Ll1a,Ll2a,Ll3,Wl1,Wl2,Wl3)),sta
     opposite(Ll1a,Ll1b),
     opposite(Ll2a,Ll2b).
 
+move(state(right(Lr1a,Lr2,Lr3,Wr1,Wr2,Wr3),left(Ll1a,Ll2,Ll3,Wl1,Wl2,Wl3)),state(right(Lr1b,Lr2,Lr3,Wr1,Wr2,Wr3),left(Ll1b,Ll2,Ll3,Wl1,Wl2,Wl3))):-
+    opposite(Lr1a,Lr1b),
+    opposite(Ll1a,Ll1b).
+    
+
 
