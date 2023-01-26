@@ -83,3 +83,10 @@ move(state(right(Lr1a,Lr2,Lr3,Wr1,Wr2,Wr3a),left(Ll1a,Ll2,Ll3,Wl1,Wl2,Wl3a)),sta
     opposite(Wr3a,Wr3b),
     opposite(Ll1a,Ll1b),
     opposite(Wl3a,Wl3b).
+
+# Lion 2 and Lion 3
+move(state(right(Lr1,Lr2a,Lr3a,Wr1,Wr2,Wr3),left(Ll1,Ll2a,Ll3a,Wl1,Wl2,Wl3)),state(right(Lr1,Lr2b,Lr3b,Wr1,Wr2,Wr3),left(Ll1,Ll2b,Ll3b,Wl1,Wl2,Wl3))):-
+    opposite(Lr3a,Lr3b),
+    opposite(Lr2a,Lr2b),
+    opposite(Ll3a,Ll3b),
+    opposite(Ll2a,Ll2b).
