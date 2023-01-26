@@ -149,7 +149,7 @@ move(state(right(Lr1,Lr2,Lr3,Wr1a,Wr2,Wr3a),left(Ll1,Ll2,Ll3,Wl1a,Wl2,Wl3a)),sta
     opposite(Wl3a,Wl3b).
 
 # Wildebeest 2 and Wildebeest 3
-move(state(right(Lr1,Lr2,Lr3,Wr1a,Wr2,Wr3a),left(Ll1,Ll2,Ll3,Wl1a,Wl2,Wl3a)),state(right(Lr1,Lr2b,Lr3,Wr1b,Wr2,Wr3b),left(Ll1,Ll2,Ll3,Wl1b,Wl2,Wl3b))):-
+move(state(right(Lr1,Lr2,Lr3,Wr1,Wr2a,Wr3a),left(Ll1,Ll2,Ll3,Wl1,Wl2a,Wl3a)),state(right(Lr1,Lr2b,Lr3,Wr1,Wr2b,Wr3b),left(Ll1,Ll2,Ll3,Wl1,Wl2b,Wl3b))):-
     opposite(Wr2a,Wr2b),
     opposite(Wr3a,Wr3b),
     opposite(Wl2a,Wl2b),
