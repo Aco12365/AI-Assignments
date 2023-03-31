@@ -1,6 +1,6 @@
-from cgi import print_form
+
 import math
-from types import NoneType
+
 
 w1 = 0.75
 w2 = 0.5
@@ -12,7 +12,6 @@ x3 = 1
 counter = 0
 desired = [1,-1,1,-1,1,-1,-1,1,1,-1]
 
-delta = None
 delta1 = None
 delta2 = None
 delta3 = None
@@ -24,9 +23,15 @@ Iteration_count = 0
 
 while check != 1:
     checkcount = 0
-    for i in range(0,len(x1)-1):
+    Iteration_count = Iteration_count + 1
+    print(f"statring iteration #{Iteration_count}\n")
+    for i in range(0,len(x1)):
+        one = x1[i]
+        two = x2[i]
+        three = x3
+        print(f"TRAINING WITH VALUES [x1: {one}, x2: {two}, x3: {three}]")
         net = w1 * x1[i] + w2 * x2[i] + w3 * x3
-        print(f"net: {net}\n")
+        print(f"net: {net}")
 
         if net > 0:
             fnet = 1
@@ -39,7 +44,7 @@ while check != 1:
         delta3 = c * (desired[i] - fnet) * x3
         print(f"delta1: {delta1}")
         print(f"delta2: {delta2}")
-        print(f"delta3: {delta3}\n")
+        print(f"delta3: {delta3}")
 
         w1 = w1 + delta1
         w2 = w2 + delta2
@@ -47,16 +52,18 @@ while check != 1:
 
    
         print(f"New weights include:")
+        print(f"w1: {w1}")
+        print(f"w2: {w2}")
+        print(f"w3: {w3}")
 
 
         if delta1 == 0 and delta2 == 0 and delta3 == 0:
             checkcount = checkcount + 1
         print(f"checkcount: {checkcount}\n")   
-    if checkcount == 9:
-        check = 1
-    Iteration_count = Iteration_count + 1
 
-    print(f"Iteration Count: {Iteration_count}\n")
-    print(f"w1: {w1}")
-    print(f"w2: {w2}")
-    print(f"w3: {w3}\n")
+    if checkcount == 10:
+        check = 1
+
+   
+    
+print(f"Iteration Count: {Iteration_count}\n")
